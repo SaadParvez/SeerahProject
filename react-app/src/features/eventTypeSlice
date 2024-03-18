@@ -1,0 +1,20 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+export const eventTypeSlice = createSlice({
+    name:'location',
+    initialState:{
+       eventType: ''
+    },
+
+    reducers: {
+        changeEventType: (state, action) =>{
+            console.log(action)
+            state.eventType= action.payload
+        },
+        
+    }
+})
+
+export const { changeEventType } = eventTypeSlice.actions
+
+export default eventTypeSlice.reducer
